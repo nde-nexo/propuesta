@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+:root {
+  --color-rojo: #e63946;
+  --color-amarillo: #ffb703;
+  --color-gris: #f1faee;
+  --color-negro: #1a1a1a;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-negro);
+  color: white;
+  overflow-x: hidden;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.burger-menu-container {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(100%);
+}
+
+.burger-menu-container.active {
+  transform: translateX(0);
+}
+
+.flame-shadow {
+  filter: drop-shadow(0 0 15px rgba(230, 57, 70, 0.6));
+}
+
+.card-hover:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(255, 183, 3, 0.2);
+}
+
+.cart-drawer {
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%);
+}
+
+.cart-drawer.active {
+  transform: translateX(0);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.floating-logo {
+  animation: float 4s ease-in-out infinite;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--color-rojo);
+  border-radius: 10px;
+}
